@@ -1,4 +1,6 @@
 import jsonrpc
+from hash.blake import BLAKE as BLAKEpy
+import hash.sha
 Q = []
 class mcrpc:
 		def __init__(self,details):
