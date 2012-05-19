@@ -1,5 +1,5 @@
 import time
-from blake import BLAKE as BLAKEpy
+from hash.blake import BLAKE as BLAKEpy
 
 BLAKE = BLAKEpy
 
@@ -18,7 +18,7 @@ def time_it(hashsize, iter):
 		qq = qq + (t1-t0)
         
 iterations = [10000]
-hashsizes  = [256,512]
+hashsizes  = [512]
 for hashsize in hashsizes:
 	for iter in iterations:
 		time_it(hashsize, iter)
