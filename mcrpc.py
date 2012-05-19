@@ -5,7 +5,7 @@ class mcrpc:
 			global Q
 			Q = details.split(':')
 			print "Set Microcash Node: {0}:{1}".format(Q[0],Q[1])
-			print "Beta microcash Python connector brought to you by D34TH\nthank jgarzik (Jeff Garzik) for the jsonrpc python authserviceproxy"
+			print "Beta microcash Python connector brought to you by D34TH\nthank jgarzik (Jeff Garzik) for the jsonrpc python authserviceproxy\n"
 		def getinfo(self):
 			return jsonrpc.ServiceProxy(("http://thin:client@{0}:{1}".format(Q[0],Q[1]))).sc_getinfo()
 		def getbalance(self,addr):
