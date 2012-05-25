@@ -1,4 +1,4 @@
-import time
+import time, hash.sha
 from hash.blake import BLAKE as BLAKEpy
 
 BLAKE = BLAKEpy
@@ -11,7 +11,7 @@ def time_it(hashsize, iter):
 	qq = 0
 	t0 = time.time()
 	for i in range(iter):
-		digest = BLAKE(hashsize).digest(b'\x00')   # hash a single null byte
+		digest = hash.sha.hash(BLAKE(hashsize).digest(b'\x00'))   # hash a single null byte
 		t1 = time.time()
 		qq = qq + (t1-t0)
         
